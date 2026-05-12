@@ -20,6 +20,7 @@ alwaysApply: true
 - 验收通过后提示你提交，并建议打里程碑标签；提交需你确认。
 - 需求变更先更新文档，再改代码。
 - 凡「值得记录的交付或修复」，按下方 **版本日志** 更新 `docs/plan-version-log.md`（与用户确认是否发版、是否打 tag）。
+- **用户要求提交 Git / push / 同步到 GitHub 时**：除非用户明确说 **不必改日志**，否则须在 **同一轮** 内先按下方 **版本日志** 写好本次改动的摘要（新日期节或按规则追加），把 `docs/plan-version-log.md` 纳入提交，再 `commit` / `push`。
 
 ## 版本日志（`docs/plan-version-log.md`）
 
