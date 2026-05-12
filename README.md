@@ -1,9 +1,10 @@
 # AI Recruitment Agent MVP
 
-## Product plan (§15 同步)
+## Product plan 与版本日志
 
 主 Plan 由 Cursor 保存在 `~/.cursor/plans/ai_recruitment_agent_mvp_6f1c943a.plan.md`。  
-**Plan 冻结后的变更（第 15 节）** 在仓库内可见：**[docs/plan-section-15-post-plan.md](docs/plan-section-15-post-plan.md)**。
+**各 Plan 阶段已交付能力与按日期的修复/迭代记录** 统一维护在：**[docs/plan-version-log.md](docs/plan-version-log.md)**。  
+§15 与主 Plan 的同步说明见：**[docs/plan-section-15-post-plan.md](docs/plan-section-15-post-plan.md)**。
 
 ## Prerequisites
 - Python 3.11+
