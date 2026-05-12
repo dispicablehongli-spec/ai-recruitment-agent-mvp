@@ -8,4 +8,4 @@
 
 **[docs/plan-version-log.md](plan-version-log.md)**（内含版本索引与 `2026-05-12` 起的 Post-Plan 条目）。
 
-若你在主 Plan 文件中维护 §15，完成后请将相同内容同步到 `plan-version-log.md` 中对应日期小节，更新 **版本索引** 表，并按该文件约定归入 **Added / Changed / Fixed**，同时刷新文末 **当前能力快照**。
+若你在主 Plan 文件中维护 §15，完成后请按 **`.cursor/rules/vibe-coding.md`** 中 **「版本日志」** 的约定，将相同要点同步到 `plan-version-log.md`（新日期节、索引、分类、文末快照）。

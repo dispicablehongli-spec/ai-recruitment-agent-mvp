@@ -1,16 +1,24 @@
 # AI Recruitment Agent MVP
 
-## Product plan 与版本日志
+## 产品与流程
 
-主 Plan 由 Cursor 保存在 `~/.cursor/plans/ai_recruitment_agent_mvp_6f1c943a.plan.md`。  
-**各 Plan 阶段已交付能力与按日期的修复/迭代记录** 统一维护在：**[docs/plan-version-log.md](docs/plan-version-log.md)**。  
-§15 与主 Plan 的同步说明见：**[docs/plan-section-15-post-plan.md](docs/plan-section-15-post-plan.md)**。
+这是一个 **AI 招聘代理 MVP**：候选人上传 **简历 PDF**，后端解析并与开放岗位匹配，**LangGraph** 编排流程；前端通过 **SSE** 展示进度，支持 **选岗**、**缺失信息补传** 与 **撤回申请**。
 
-## Prerequisites
+**典型流程**：上传 → 解析与匹配 →（必要时）补传 →（有岗时）选岗 → 成功邀约或匹配失败 / 取消 / 错误等终态。
+
+## 最近更新
+
+（仅保留面向读者的摘要；**完整变更与边界**见 **[docs/plan-version-log.md](docs/plan-version-log.md)**。）
+
+- **2026-05-12**：MVP 主流程与 API 交付；修复联调 CORS、选岗后继续执行时误重跑 PDF 解析；改进 demo 简历与抽取逻辑；前端步骤条、结果页、重传与错误态等体验升级。
+
+## 环境与运行
+
+### Prerequisites
 - Python 3.11+
 - Node.js 18+
 
-## Environment
+### Environment
 Create `.env` in project root:
 
 ```env
@@ -19,7 +27,7 @@ OPENAI_BASE_URL=https://api.openai.com/v1
 OPENAI_MODEL=gpt-4o-mini
 ```
 
-## Install
+### Install
 
 ```bash
 python -m venv .venv
@@ -28,21 +36,21 @@ pip install -r requirements.txt
 cd frontend && npm install && cd ..
 ```
 
-## Run backend
+### Run backend
 
 ```bash
 source .venv/bin/activate
 uvicorn backend.main:app --reload --port 8000
 ```
 
-## Run frontend
+### Run frontend
 
 ```bash
 cd frontend
 npm run dev
 ```
 
-## Demo scenarios
+### Demo scenarios
 
 ```bash
 bash scripts/demo.sh success
@@ -50,7 +58,8 @@ bash scripts/demo.sh match_failed
 bash scripts/demo.sh missing_required
 ```
 
-## API summary
+## API
+
 - `POST /applications/upload`
 - `GET /applications/{id}`
 - `GET /applications/{id}/events`

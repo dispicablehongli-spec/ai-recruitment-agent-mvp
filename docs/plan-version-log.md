@@ -1,33 +1,10 @@
 # Plan 版本与变更日志
 
-本文件汇总 **每个 Plan 阶段已交付的能力** 与 **冻结后的修复/迭代记录**，并按 **版本日期** 归档，条目习惯对齐 [Keep a Changelog](https://keepachangelog.com/) 的 **Added / Changed / Fixed**，便于扫读与发版说明。  
-主 Plan 全文由 Cursor 管理，本地路径通常为：`~/.cursor/plans/ai_recruitment_agent_mvp_6f1c943a.plan.md`（M1–M9 范围与验收以该文件为准）。
+本文件按 **版本日期** 汇总已交付能力与变更；条目格式为 **Added / Changed / Fixed**（[Keep a Changelog](https://keepachangelog.com/)）。  
 
-## 维护约定
+**如何维护本文件**（追加规则、索引、快照、§15 同步、新节模板）：见仓库 **`.cursor/rules/vibe-coding.md`** 中的 **「版本日志」** 章节。
 
-- 每完成一个可验收的 Plan 段落、或发布一次值得记录的版本，在下方 **追加** 新的一节（日期格式 `YYYY-MM-DD`）；版本索引表同步增一行。
-- 每一节建议包含三类（可缺省）：**Added**（新能力）、**Changed**（行为或体验调整）、**Fixed**（缺陷）。历史包袱（如 Post-Plan P1/P2）可在小节标题或列表中保留原编号便于对主 Plan §15 映射。
-- 可选：在 Git 上打 **语义化标签**（如 `v0.1.0`），并在索引表「标签」列填写，便于 `git diff v0.1.0..v0.2.0`。
-- 若仅镜像主 Plan 某一节，在条目中写明对应章节（如 §15）。
-- **文档末尾的「当前能力快照」** 仅在发布新节时更新为「截至最新版本」的 In scope / Out of scope，供下一次扩展快速对齐。
-
-### 新版本模板（复制后填空）
-
-```markdown
-## YYYY-MM-DD — 简短标题
-
-**标签**：（可选）`v0.x.y`  
-**关联主 Plan**：（可选）章节或里程碑 ID
-
-### Added
-- …
-
-### Changed
-- …
-
-### Fixed
-- …
-```
+主 Plan（M1–M9 等）全文由 Cursor 管理，本地路径通常为：`~/.cursor/plans/ai_recruitment_agent_mvp_6f1c943a.plan.md`（范围与验收以该文件为准）。
 
 ---
 
