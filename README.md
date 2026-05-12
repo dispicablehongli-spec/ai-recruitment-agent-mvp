@@ -36,14 +36,30 @@ pip install -r requirements.txt
 cd frontend && npm install && cd ..
 ```
 
-### Run backend
+### 本地一键开发（推荐）
+
+在项目根目录执行（后端后台跑，前端前台；**Ctrl+C** 会一并结束后端）：
+
+```bash
+bash scripts/dev.sh
+```
+
+macOS 下启动并用系统浏览器打开前端：
+
+```bash
+bash scripts/dev.sh --open
+```
+
+### 分别启动（可选）
+
+**后端**
 
 ```bash
 source .venv/bin/activate
 uvicorn backend.main:app --reload --port 8000
 ```
 
-### Run frontend
+**前端**
 
 ```bash
 cd frontend
