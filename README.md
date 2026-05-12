@@ -10,8 +10,7 @@
 
 （仅保留面向读者的摘要；**完整变更与边界**见 **[docs/plan-version-log.md](docs/plan-version-log.md)**。）
 
-- **2026-05-13**：`scripts/dev.sh` 一键启动后端+前端（可选 `--open`）；README 补充说明。
-- **2026-05-12**：MVP 主流程与 API 交付；修复联调 CORS、选岗后继续执行时误重跑 PDF 解析；改进 demo 简历与抽取逻辑；前端步骤条、结果页、重传与错误态等体验升级。
+- **2026-05-12**：MVP 主流程与 API、Post-Plan 联调与前端升级；文档与版本日志体例整理；**`scripts/dev.sh`** 一键起后端+前端（可选 `--open`）及 README 一键开发说明。
 
 ## 环境与运行
 

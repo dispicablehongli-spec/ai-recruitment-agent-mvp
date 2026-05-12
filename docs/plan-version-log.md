@@ -12,22 +12,7 @@
 
 | 版本日期   | 标签（可选） | 说明 |
 |------------|--------------|------|
-| 2026-05-13 | —            | `scripts/dev.sh` 一键本地起后端+前端；README 一键开发说明 |
-| 2026-05-12 | —            | MVP（主 Plan M1–M9）基线 + Post-Plan 联调修复（P1）与前端升级（P2）；日志体例改为 Added/Changed/Fixed |
-
----
-
-## 2026-05-13 — 本地开发脚本
-
-**关联主 Plan**：无（工程化体验）。
-
-### Added
-
-- **`scripts/dev.sh`**：仓库根目录一键启动——后台 `uvicorn`（`8000`）、前台 `npm run dev`（`frontend`）；`Ctrl+C` 结束时清理后端子进程；macOS 可选 `bash scripts/dev.sh --open` 用默认浏览器打开前端。
-
-### Changed
-
-- **README**：增加「本地一键开发」说明，指向 `scripts/dev.sh`。
+| 2026-05-12 | —            | MVP（主 Plan M1–M9）基线 + Post-Plan（P1/P2）+ 文档体例；同日补充 `scripts/dev.sh` 与 README 一键开发说明 |
 
 ---
 
@@ -47,11 +32,13 @@
 - **P2.4** `MissingInfoAlert.tsx`：卡片式缺失字段展示、重传次数说明、内嵌隐藏 `<input type="file">` 调用真实 `POST /applications/{id}/reupload`。
 - **P2.5** `Application.tsx`：`match_failed_terminated` / `user_cancelled_terminated` 全屏结果页；`system_error` 内联提示与 Try again；上传 loading、全局 API 错误 banner；SSE 触发快照刷新（`qualifiedJobs` / `missingFields`）。
 - **P1.5** `scripts/gen_demo_pdfs.py`：用 `reportlab` 生成可解析 demo PDF（`resume_success.pdf`、`resume_match_failed.pdf`、`resume_missing_required.pdf`）。
+- **`scripts/dev.sh`**（同日后续）：仓库根一键启动——后台 `uvicorn`（`8000`）、前台 `npm run dev`（`frontend`）；`Ctrl+C` 结束时清理后端子进程；macOS 可选 `bash scripts/dev.sh --open` 打开默认浏览器。
 
 ### Changed
 
 - **P2.2** `JobList.tsx`：提交中 "Processing…"、防重复点击（disabled）、卡片式样式。
 - **P2.3** `ResumeUpload.tsx`：`disabled`、重置 input 避免同文件无法二次选择。
+- **README**（同日后续）：「本地一键开发」说明，指向 `scripts/dev.sh`。
 
 ### Fixed
 
@@ -62,7 +49,7 @@
 
 ---
 
-## 当前能力快照（截至 2026-05-13）
+## 当前能力快照（截至 2026-05-12）
 
 本节供 **下一次迭代** 快速对齐「已实现 vs 准备扩展」；发新版本后改为最新日期。
 
