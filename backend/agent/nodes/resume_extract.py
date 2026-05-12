@@ -11,14 +11,31 @@ def _mock_resume(text: str) -> dict:
             skills.append(item)
     if not skills and "match_failed" not in lower:
         skills = ["python", "fastapi"]
+
+    # Safe name extraction: work entirely on lower-cased text to avoid IndexError
+    name = "Demo Candidate"
+    if "name:" in lower:
+        parts = lower.split("name:", 1)
+        if len(parts) > 1:
+            name = parts[1].splitlines()[0].strip().title() or "Demo Candidate"
+
+    # Detect email: if the text already contains an @-address, use it; otherwise treat as missing
+    import re as _re
+    email_match = _re.search(r"[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}", text)
+    email = email_match.group(0) if email_match else None
+
+    # Detect "graphic/design/art" profile → simulate a non-tech match-failed scenario
+    is_non_tech = any(kw in lower for kw in ["graphic design", "illustrat", "figma", "procreate", "adobe illustrator"])
+    effective_skills = ["painting"] if is_non_tech else (skills if skills else ["python", "fastapi"])
+
     return {
-        "name": "Demo Candidate" if "name:" not in lower else text.split("name:")[1].splitlines()[0].strip(),
+        "name": name,
         "date_of_birth": "1998-01",
         "gender": "male",
-        "email": None if "missing_email" in lower else "demo@example.com",
+        "email": email,
         "phone": "18800000000",
         "experiences": ["Built backend systems"],
-        "skills": skills if "match_failed" not in lower else ["painting"],
+        "skills": effective_skills,
         "education": ["Demo University, Bachelor"],
         "certifications": [],
         "years_of_experience": 3,

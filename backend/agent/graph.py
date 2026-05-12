@@ -57,6 +57,12 @@ async def run_until_interrupt_or_end(state: dict) -> dict:
         if state.get("status") == "waiting_job_selection" and not state.get("selected_job_id"):
             return state
 
+        # Resume after job selection: skip re-parsing (pdf_bytes was cleared at storage time)
+        if state.get("status") == "waiting_job_selection" and state.get("selected_job_id"):
+            await interview_invitation_node(state)
+            await success_node(state)
+            return state
+
         await pdf_parse_node(state)
         if state.get("final_result"):
             return state
