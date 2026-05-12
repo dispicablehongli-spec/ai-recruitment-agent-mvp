@@ -1,0 +1,30 @@
+[
+  {
+    "id": "demo_backend_python",
+    "title": "Demo Python Backend Engineer",
+    "description": "FastAPI backend service development with SQL and async processing.",
+    "skills": ["python", "fastapi", "sql", "asyncio"],
+    "min_years": 2
+  },
+  {
+    "id": "demo_frontend_react",
+    "title": "Demo React Frontend Engineer",
+    "description": "React + TypeScript + Tailwind web UI development.",
+    "skills": ["react", "typescript", "tailwind"],
+    "min_years": 2
+  },
+  {
+    "id": "demo_ml_engineer",
+    "title": "Demo ML Engineer",
+    "description": "ML model development and deployment.",
+    "skills": ["python", "ml", "pytorch"],
+    "min_years": 3
+  },
+  {
+    "id": "demo_product_manager",
+    "title": "Demo Product Manager",
+    "description": "Roadmap and requirement management.",
+    "skills": ["prd", "roadmap", "communication"],
+    "min_years": 3
+  }
+]

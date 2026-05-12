@@ -1,0 +1,72 @@
+[
+  {
+    "id": "job_backend_python",
+    "title": "Python Backend Engineer",
+    "description": "Build FastAPI services, write SQL, design APIs, and maintain async systems.",
+    "skills": ["python", "fastapi", "sql", "asyncio"],
+    "min_years": 2
+  },
+  {
+    "id": "job_frontend_react",
+    "title": "Frontend Engineer (React)",
+    "description": "Build React + TypeScript web apps and integrate SSE/API clients.",
+    "skills": ["react", "typescript", "tailwind", "frontend"],
+    "min_years": 2
+  },
+  {
+    "id": "job_data_analyst",
+    "title": "Data Analyst",
+    "description": "Analyze business data with SQL and dashboards. Communicate insights.",
+    "skills": ["sql", "analytics", "dashboard"],
+    "min_years": 1
+  },
+  {
+    "id": "job_ml_engineer",
+    "title": "ML Engineer",
+    "description": "Train and serve machine learning models in production.",
+    "skills": ["python", "ml", "pytorch", "serving"],
+    "min_years": 3
+  },
+  {
+    "id": "job_product_manager",
+    "title": "Product Manager",
+    "description": "Own roadmap and product requirements, coordinate cross-functional teams.",
+    "skills": ["prd", "roadmap", "communication"],
+    "min_years": 3
+  },
+  {
+    "id": "job_devops",
+    "title": "DevOps Engineer",
+    "description": "Build CI/CD, monitor systems, and manage cloud infrastructure.",
+    "skills": ["docker", "kubernetes", "ci/cd", "monitoring"],
+    "min_years": 3
+  },
+  {
+    "id": "job_ios",
+    "title": "iOS Engineer",
+    "description": "Build iOS apps with Swift and UIKit/SwiftUI.",
+    "skills": ["swift", "ios", "swiftui"],
+    "min_years": 2
+  },
+  {
+    "id": "job_android",
+    "title": "Android Engineer",
+    "description": "Build Android apps with Kotlin and Jetpack.",
+    "skills": ["kotlin", "android", "jetpack"],
+    "min_years": 2
+  },
+  {
+    "id": "job_qa",
+    "title": "QA Engineer",
+    "description": "Design and execute test plans, build automation scripts.",
+    "skills": ["testing", "automation", "qa"],
+    "min_years": 1
+  },
+  {
+    "id": "job_uiux",
+    "title": "UI/UX Designer",
+    "description": "Design product interaction and visual systems.",
+    "skills": ["figma", "ux", "ui"],
+    "min_years": 2
+  }
+]

@@ -1,0 +1,21 @@
+# 环境变量（含 API Key，禁止提交）
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+dist/
+build/
+.pytest_cache/
+
+# 数据库
+backend/data/applications.db
+
+# Node
+node_modules/
+frontend/dist/
+
+# 系统文件
+.DS_Store
