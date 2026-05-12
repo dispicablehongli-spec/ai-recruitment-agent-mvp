@@ -44,8 +44,12 @@ class LLMClient:
     async def _chat(self, prompt: str) -> str:
         if self._client is None:
             self._client = _get_async_client()
-        response = await self._client.responses.create(model=self._model, input=prompt)
-        return response.output_text
+        response = await self._client.chat.completions.create(
+            model=self._model,
+            messages=[{"role": "user", "content": prompt}],
+            response_format={"type": "json_object"},
+        )
+        return response.choices[0].message.content or ""
 
     async def chat_json(self, prompt: str) -> dict[str, Any]:
         net_retry = 3

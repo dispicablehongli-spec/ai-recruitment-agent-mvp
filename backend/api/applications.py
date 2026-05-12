@@ -1,6 +1,7 @@
+from contextlib import asynccontextmanager
 from typing import Any
 
-from fastapi import APIRouter, File, HTTPException, UploadFile
+from fastapi import APIRouter, FastAPI, File, HTTPException, UploadFile
 from fastapi.responses import StreamingResponse
 
 from backend.agent.graph import (
@@ -21,8 +22,7 @@ from backend.services.storage import (
 router = APIRouter()
 
 
-@router.on_event("startup")
-async def startup() -> None:
+async def _startup() -> None:
     await init_db()
 
 

@@ -1,9 +1,18 @@
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 
-from backend.api.applications import router as applications_router
+from backend.api.applications import _startup, router as applications_router
 from backend.api.jobs import router as jobs_router
 
-app = FastAPI(title="AI Recruitment Agent MVP")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    await _startup()
+    yield
+
+
+app = FastAPI(title="AI Recruitment Agent MVP", lifespan=lifespan)
 app.include_router(applications_router, prefix="/applications", tags=["applications"])
 app.include_router(jobs_router, prefix="/jobs", tags=["jobs"])
 
